@@ -4,8 +4,15 @@ import { HumanMessage, SystemMessage } from 'langchain';
 
 const inputCmd = process.argv.slice(2).join(' ');
 
-// Se input vuoto, restituisce Moooo
-const inputResult = inputCmd || "Moo dammi un comando";
+// Recupero i valori che seguono --stile= e --tema=
+const getArgs = (flag) =>{
+    const found = inputCmd.find(arg=>arg.startsWith(`${flag}=`));
+    return found ? found.split('=')[1] : null;
+};
+
+// Se manca, Claudio è una mucca comica che parla di mucche
+const stile = getArgs('--stile') || 'mucca comica';
+const tema = getArgs('--tema') || 'mucche';
 
 const CLAUDIO_VESPA_CHIAVE = process.env.CLAUDE_API_KEY;
 
