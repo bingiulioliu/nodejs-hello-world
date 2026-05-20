@@ -7,4 +7,6 @@ const inputCmd = process.argv.slice(2).join(' ');
 // Se input vuoto, restituisce Moooo
 const inputResult = inputCmd || "Moo dammi un comando";
 
-console.log(inputResult);
+const CLAUDIO_VESPA_CHIAVE = process.env.CLAUDE_API_KEY;
+
+
