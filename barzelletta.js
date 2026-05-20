@@ -2,7 +2,7 @@ import {cowsay} from 'cowsayjs';
 import { ChatAnthropic } from '@langchain/anthropic';
 import { HumanMessage, SystemMessage } from 'langchain';
 
-const inputCmd = process.argv.slice(2).join(' ');
+const inputCmd = process.argv.slice(2);
 
 // Recupero i valori che seguono --stile= e --tema=
 const getArgs = (flag) =>{
@@ -21,9 +21,12 @@ const model = new ChatAnthropic ({
     apiKey: CLAUDIO_VESPA_CHIAVE
 });
 
+console.log(`Barzelletta in stile ${stile} a tema ${tema}`);
+
+
 model.invoke([
-    new SystemMessage (`Sei un ${inputResult} che parla nella propria lingua usando il gergo tipico`),
-    new HumanMessage (`Raccontami una barzelletta nella tua lingua`)
+    new SystemMessage (`Sei un interprete espero che parla sempre come un ${stile}, usando il gergo di questo ruolo`),
+    new HumanMessage (`Raccontami una freddura a tema ${tema}`)
 ]).then(mooResponse=>{
     console.log(cowsay(mooResponse.content));
     

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node --env-file=.env main.js",
     "watch": "node --watch --env-file=.env main.js",
-    "traduci": "node --env-file=.env traduttore.js"
+    "barzelletta": "node --env-file=.env barzelletta.js"
   },
   "keywords": [],
   "author": "",
