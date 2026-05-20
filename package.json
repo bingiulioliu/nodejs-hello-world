@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "node --env-file=.env main.js",
-    "watch": "node --watch --env-file=.env main.js"
+    "watch": "node --watch --env-file=.env main.js",
+    "codeSwitch": "node --env-file=.env traduttore.js"
   },
   "keywords": [],
   "author": "",

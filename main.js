@@ -12,8 +12,6 @@ const variaviliEnv = process.env;
 
 const CLAUDE_API_KEY = variaviliEnv.CLAUDE_API_KEY;
 
-console.log(process.env.ANTHROPIC_API_KEY);
-
 
 const model = new ChatAnthropic({
     model:'claude-haiku-4-5',
