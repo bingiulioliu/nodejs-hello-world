@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "go": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.2",
+  "type": "module"
+}
